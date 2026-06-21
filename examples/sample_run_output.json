@@ -1,0 +1,1454 @@
+[
+  {
+    "borrower_id": "B-0001",
+    "persona_notes": "Cooperative gig-economy worker, temporary income dip, keeps her word",
+    "metrics": {
+      "borrower_id": "B-0001",
+      "current_state": "PROMISE_KEPT",
+      "tier": "Green",
+      "time_to_first_promise_turns": 4,
+      "promise_keep_rate": 2.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.1111111111111111,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "NEW",
+        "transition_reason": "No engagement from the borrower yet.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Priya, this is Riverline reaching out on behalf of Freo regarding your pending EMI of \u20b94,500. Hope you're doing well.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0001-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "Borrower responded and acknowledged the debt",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi, yeah I know, things have been a bit tight since my rides dropped this month.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0001-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "ENGAGED",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The borrower is still discussing payment options with the agent.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Totally understand, the gig income can be unpredictable. Would a part payment work, or do you need a few more days?",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0001-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower made a payment promise",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I can pay \u20b92,000 by this Friday and the rest by the 15th.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0001-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new payment has been made yet.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "That works, I'll note it down. We'll check in on Friday then.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0001-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The borrower made a partial payment as promised.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Priya, following up \u2014 we saw the \u20b92,000 came through on Friday, thank you! Are we still on track for the 15th for the remaining \u20b92,500?",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-11",
+        "conversation_id": "B-0001-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "Borrower confirms they are on track with the payment plan.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yes, picked up extra shifts this week, should be no problem.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-11",
+        "conversation_id": "B-0001-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The borrower has fulfilled their payment obligations.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Priya, just confirming the remaining \u20b92,500 went through yesterday on the 15th \u2014 all settled now. Thanks for staying in touch through this.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-16",
+        "conversation_id": "B-0001-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The borrower confirmed the payment was done and thanked the agent.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yes, glad that's done. Thanks for being patient with me.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-16",
+        "conversation_id": "B-0001-C3"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0002",
+    "persona_notes": "Genuine medical hardship, agent should route to support not pressure",
+    "metrics": {
+      "borrower_id": "B-0002",
+      "current_state": "PROMISE_KEPT",
+      "tier": "Green",
+      "time_to_first_promise_turns": 3,
+      "promise_keep_rate": 1.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.125,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact regarding the pending payment.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Good afternoon, this is regarding your loan with Nira, the payment for last month is still pending. Can we talk about it?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-03",
+        "conversation_id": "B-0002-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "HARDSHIP_FLAGGED",
+        "transition_reason": "Borrower mentioned a family hardship.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I'm sorry, my father was hospitalized last month and everything went towards that. I genuinely don't have it right now.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-03",
+        "conversation_id": "B-0002-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "HARDSHIP_FLAGGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Agent offered restructuring into smaller installments",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I'm really sorry to hear that. Let's not worry about the full amount right now \u2014 would it help if we looked at restructuring this into smaller installments once things settle?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-03",
+        "conversation_id": "B-0002-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No explicit promise or payment was made.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "That would actually help a lot, yes.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-03",
+        "conversation_id": "B-0002-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new payment or confirmation was made.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Okay, I'll flag this for our restructuring team to reach out with options. No pressure on the original date.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-03",
+        "conversation_id": "B-0002-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The agent is following up on a previously made promise to restructure the debt.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Hi, following up \u2014 did our restructuring team reach out with the revised plan?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-20",
+        "conversation_id": "B-0002-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The borrower confirmed agreement to the new plan.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yes, I agreed to the new plan, \u20b91,500 a month starting next week. That works for me.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-20",
+        "conversation_id": "B-0002-C2"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "No new information was provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Great, noting that down. Thank you for working through this with us.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-20",
+        "conversation_id": "B-0002-C2"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0003",
+    "persona_notes": "Disputes the amount initially, dispute is legitimate (duplicate charge), resolves cleanly",
+    "metrics": {
+      "borrower_id": "B-0003",
+      "current_state": "PROMISE_KEPT",
+      "tier": "Green",
+      "time_to_first_promise_turns": 6,
+      "promise_keep_rate": 1.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.1111111111111111,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "dispute"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Arjun, this is regarding your outstanding EMI of \u20b98,200 with CRED.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-05",
+        "conversation_id": "B-0003-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "Borrower disputes the outstanding amount",
+        "risk_flags": [
+          "dispute"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "That number is wrong, I already paid \u20b94,000 last week, your system shows the full amount still.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-05",
+        "conversation_id": "B-0003-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "The agent is investigating the borrower's claim, no resolution or escalation occurred.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Let me check that for you, give me a moment.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-05",
+        "conversation_id": "B-0003-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "Borrower is providing evidence to support their claim.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Sure, I have the transaction screenshot if needed.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-05",
+        "conversation_id": "B-0003-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "DISPUTING",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent acknowledged the borrower's payment and updated the balance.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Arjun, you were right \u2014 there was a sync delay, your \u20b94,000 payment is now reflected. Updated balance is \u20b94,200.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0003-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower made a promise to pay the remaining amount",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Good, thanks for checking. I'll pay the remaining \u20b94,200 by next week.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0003-C2"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new payment or escalation occurred.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Perfect, noted. Apologies for the confusion earlier.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0003-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "The agent confirmed receipt of the payment, indicating the borrower fulfilled their promise.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Arjun, confirming the \u20b94,200 was received yesterday \u2014 your account is fully settled now.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-14",
+        "conversation_id": "B-0003-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "Borrower confirmed satisfaction with the update.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Great, thank you.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-14",
+        "conversation_id": "B-0003-C3"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0004",
+    "persona_notes": "Serial promise-breaker, pattern escalates over three contacts",
+    "metrics": {
+      "borrower_id": "B-0004",
+      "current_state": "ESCALATED",
+      "tier": "Red",
+      "time_to_first_promise_turns": 2,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 3,
+      "risk_flag_density": 0.3333333333333333,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "evasion",
+        "hostility",
+        "payment_delay",
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Vikram, calling about your pending payment of \u20b912,000 with Propelld.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-01",
+        "conversation_id": "B-0004-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower has made a promise to pay by the weekend",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yeah yeah, I'll pay it by this weekend, don't worry.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-01",
+        "conversation_id": "B-0004-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information was provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Great, I'll note that \u2014 Saturday the 4th then?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-01",
+        "conversation_id": "B-0004-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "The borrower reaffirmed their promise to pay.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yeah, Saturday.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-01",
+        "conversation_id": "B-0004-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "Payment was not made as promised",
+        "risk_flags": [
+          "payment_delay"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Vikram, we didn't see the payment come through on Saturday \u2014 what happened?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-07",
+        "conversation_id": "B-0004-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower made a new payment promise",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Oh sorry, got busy, I'll do it Monday for sure.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-07",
+        "conversation_id": "B-0004-C2"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new payment confirmation was made.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Okay, noting Monday the 9th. We really need this to go through this time.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-07",
+        "conversation_id": "B-0004-C2"
+      },
+      {
+        "turn": 4,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "The borrower reaffirmed their promise to pay on Monday.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yeah yeah, Monday.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-07",
+        "conversation_id": "B-0004-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "The borrower missed the second payment date.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Vikram, Monday's payment also didn't come through. This is the second missed date \u2014 can you help me understand what's going on?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-12",
+        "conversation_id": "B-0004-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "Borrower's response does not indicate a new promise or escalation.",
+        "risk_flags": [
+          "hostility"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Look, I said I'll pay, stop calling me every other day, it's annoying.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-12",
+        "conversation_id": "B-0004-C3"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "No new commitment or escalation was made.",
+        "risk_flags": [
+          "hostility"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I understand the calls are frustrating, but we do need a real commitment here since two dates have passed.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-12",
+        "conversation_id": "B-0004-C3"
+      },
+      {
+        "turn": 4,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "ESCALATED",
+        "transition_reason": "Borrower is evasive and hostile",
+        "risk_flags": [
+          "hostility",
+          "evasion"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Whatever, just leave me alone, I'll deal with it when I deal with it.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-12",
+        "conversation_id": "B-0004-C3"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0005",
+    "persona_notes": "Hostile from the very first contact, no de-escalation",
+    "metrics": {
+      "borrower_id": "B-0005",
+      "current_state": "ESCALATED",
+      "tier": "Red",
+      "time_to_first_promise_turns": null,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 1,
+      "risk_flag_density": 0.5,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "hostility",
+        "denial_of_debt"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "NEW",
+        "transition_reason": "No engagement or response from the borrower yet.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Good morning, this is Riverline calling regarding your outstanding balance with CRED.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-08",
+        "conversation_id": "B-0005-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "NEW",
+        "proposed_state": "ESCALATED",
+        "transition_reason": "Borrower is hostile and denies the debt",
+        "risk_flags": [
+          "hostility",
+          "denial_of_debt"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I don't owe you people anything, stop calling this number or I'm reporting you.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-08",
+        "conversation_id": "B-0005-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "ESCALATED",
+        "proposed_state": "ESCALATED",
+        "transition_reason": "The borrower's hostility continues, and no resolution or hardship indication is present.",
+        "risk_flags": [
+          "hostility"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I understand this is frustrating \u2014 I just want to clarify the details so we can sort this out fairly.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-08",
+        "conversation_id": "B-0005-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "ESCALATED",
+        "proposed_state": "ESCALATED",
+        "transition_reason": "Borrower continues to deny debt and shows hostility.",
+        "risk_flags": [
+          "hostility"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "There's nothing to sort out, lose my number.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-08",
+        "conversation_id": "B-0005-C1"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0006",
+    "persona_notes": "Ghosts after first contact, re-engages two weeks later when reached again",
+    "metrics": {
+      "borrower_id": "B-0006",
+      "current_state": "PROMISE_MADE",
+      "tier": "Green",
+      "time_to_first_promise_turns": 4,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.0,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": []
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The borrower has been contacted by the agent.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Meena, this is regarding your pending EMI of \u20b96,000 with Freo. Could you let us know your situation?",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0006-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "ENGAGED",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "No new information was provided by the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Meena, following up again on the \u20b96,000 pending with Freo \u2014 would appreciate hearing from you.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-09",
+        "conversation_id": "B-0006-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "ENGAGED",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "No change in borrower's state as there is no response from the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Meena, reaching out once more about the pending EMI \u2014 happy to work out a plan that suits you.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-17",
+        "conversation_id": "B-0006-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower has made a payment promise",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Sorry for the silence, I switched jobs and missed these. I can pay \u20b96,000 by next Friday.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-17",
+        "conversation_id": "B-0006-C3"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information was provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "No worries at all, thanks for getting back to me. Noting Friday the 24th.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-17",
+        "conversation_id": "B-0006-C3"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0007",
+    "persona_notes": "Breaks a promise once, but re-promises with a believable reason and follows through \u2014 recovery arc",
+    "metrics": {
+      "borrower_id": "B-0007",
+      "current_state": "PROMISE_KEPT",
+      "tier": "Amber",
+      "time_to_first_promise_turns": 2,
+      "promise_keep_rate": 0.5,
+      "state_regressions": 1,
+      "risk_flag_density": 0.125,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Rahul, calling about the \u20b99,500 pending with Nira.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-04",
+        "conversation_id": "B-0007-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower has made a promise to clear the debt by a specific date.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Right, I can clear that by the 10th, my salary comes in on the 9th.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-04",
+        "conversation_id": "B-0007-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Sounds good, noting the 10th.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-04",
+        "conversation_id": "B-0007-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "Payment was not made as promised",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Rahul, we didn't see the \u20b99,500 come through yesterday \u2014 everything okay?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-11",
+        "conversation_id": "B-0007-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower provides a new payment date after explaining the delay in salary",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Ah, sorry \u2014 my salary got delayed because of a company issue, it's actually coming on the 14th now. I can pay the same day.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-11",
+        "conversation_id": "B-0007-C2"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new payment was made or missed.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Understandable, these things happen. Let's note the 14th \u2014 I'll check in then.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-11",
+        "conversation_id": "B-0007-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "Payment was confirmed to have been made.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Rahul, just confirming \u2014 the \u20b99,500 came through yesterday on the 14th. All clear now, thank you.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-15",
+        "conversation_id": "B-0007-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_KEPT",
+        "proposed_state": "PROMISE_KEPT",
+        "transition_reason": "Borrower confirms payment has been made.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yep, sorted. Thanks for being patient.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-15",
+        "conversation_id": "B-0007-C3"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0008",
+    "persona_notes": "Discloses hardship mid-dispute \u2014 tests HARDSHIP_FLAGGED reachable from DISPUTING via ENGAGED",
+    "metrics": {
+      "borrower_id": "B-0008",
+      "current_state": "HARDSHIP_FLAGGED",
+      "tier": "Amber",
+      "time_to_first_promise_turns": null,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.2,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Sunita, calling about the \u20b97,000 outstanding with Propelld.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-06",
+        "conversation_id": "B-0008-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "Borrower disputes the outstanding amount.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I don't think that's right, I was told my balance was \u20b95,500 last time I checked.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-06",
+        "conversation_id": "B-0008-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "The agent is investigating the dispute and will call back with more information.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Let me pull up the exact breakdown and call you back within the hour with the correct figure.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-06",
+        "conversation_id": "B-0008-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "DISPUTING",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "Borrower is open to discussing their financial situation",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Okay, fine, but honestly even \u20b95,500 is hard for me right now, I lost some hours at work this month.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-04-06",
+        "conversation_id": "B-0008-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "ENGAGED",
+        "proposed_state": "HARDSHIP_FLAGGED",
+        "transition_reason": "Borrower mentioned losing hours at work, indicating financial stress.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I hear you, we'll sort the number out first and then talk about a plan that actually works for your situation.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-04-06",
+        "conversation_id": "B-0008-C1"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0009",
+    "persona_notes": "Dialogue evaluator submission: custom script parsed at turn count 5",
+    "metrics": {
+      "borrower_id": "B-0009",
+      "current_state": "PROMISE_MADE",
+      "tier": "Green",
+      "time_to_first_promise_turns": 4,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 0,
+      "risk_flag_density": 0.2,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower regarding the overdue EMI.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hello Ravi, this call is regarding your EMI of INR 25000, the due date has surpassed 5 days, therefore please let us know when you going to pay!",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-06-21",
+        "conversation_id": "B-0009-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "HARDSHIP_FLAGGED",
+        "transition_reason": "Borrower mentions being hospitalized and having a shortage of money",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi, yeah I know, things have been a bit tight since I got hospitalized this month and am in shortage of money",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-06-21",
+        "conversation_id": "B-0009-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "HARDSHIP_FLAGGED",
+        "proposed_state": "HARDSHIP_FLAGGED",
+        "transition_reason": "No new information provided to change the state.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Sorry for you, Totally understand, the income can be unpredictable. Would art payment work, or do you need a few more days?",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-06-21",
+        "conversation_id": "B-0009-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "HARDSHIP_FLAGGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower has made a payment proposal.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I can pay \u20b910,000 by end of this month and the rest by next month, would be better if EMI.",
+        "speaker": "borrower",
+        "channel": "voice",
+        "date": "2026-06-21",
+        "conversation_id": "B-0009-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information provided to change the state.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I'll note it down. We'll check with our Officers.",
+        "speaker": "agent",
+        "channel": "voice",
+        "date": "2026-06-21",
+        "conversation_id": "B-0009-C1"
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0010",
+    "persona_notes": "Dialogue evaluator submission: custom script parsed at conversation count 3",
+    "metrics": {
+      "borrower_id": "B-0010",
+      "current_state": "PROMISE_MADE",
+      "tier": "Amber",
+      "time_to_first_promise_turns": 9,
+      "promise_keep_rate": 0.0,
+      "state_regressions": 1,
+      "risk_flag_density": 0.06666666666666667,
+      "compliance_flags_total": 0,
+      "unique_risk_flags": [
+        "financial_stress"
+      ]
+    },
+    "turn_outcomes": [
+      {
+        "turn": 1,
+        "current_state": "NEW",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The agent initiated contact with the borrower.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Rahul, this is Riverline calling on behalf of Freo regarding your overdue EMI of \u20b95,000.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0010-C1"
+      },
+      {
+        "turn": 2,
+        "current_state": "ENGAGED",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "Borrower disputes the overdue amount",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Overdue? I don't think so. I paid everything last month.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0010-C1"
+      },
+      {
+        "turn": 3,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "The borrower's dispute remains unresolved.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I understand. Our records show the EMI due on March 30 is still pending.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0010-C1"
+      },
+      {
+        "turn": 4,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "Borrower is investigating the dispute",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "That doesn't sound right. I'll check and get back to you.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0010-C1"
+      },
+      {
+        "turn": 5,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "No resolution or escalation occurred in the latest turn.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Sure, please verify and let us know. We'll follow up in a couple of days.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-02",
+        "conversation_id": "B-0010-C1"
+      },
+      {
+        "turn": 1,
+        "current_state": "DISPUTING",
+        "proposed_state": "DISPUTING",
+        "transition_reason": "No new information was provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Hi Rahul, just following up on our previous conversation regarding the pending EMI.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-03",
+        "conversation_id": "B-0010-C2"
+      },
+      {
+        "turn": 2,
+        "current_state": "DISPUTING",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "Borrower acknowledged missing the payment by mistake.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Yes, I checked. Looks like I missed the payment by mistake.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-03",
+        "conversation_id": "B-0010-C2"
+      },
+      {
+        "turn": 3,
+        "current_state": "ENGAGED",
+        "proposed_state": "ENGAGED",
+        "transition_reason": "The conversation is ongoing with no indication of a state change.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Thank you for confirming. When would you be able to clear the dues?",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-03",
+        "conversation_id": "B-0010-C2"
+      },
+      {
+        "turn": 4,
+        "current_state": "ENGAGED",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "The borrower has made a promise to pay the full amount by a specific date.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "I'll make the full payment of \u20b95,000 by April 5.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-03",
+        "conversation_id": "B-0010-C2"
+      },
+      {
+        "turn": 5,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Great, I'll note that commitment. We'll check again on April 5.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-03",
+        "conversation_id": "B-0010-C2"
+      },
+      {
+        "turn": 1,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No new information provided to change the state.",
+        "risk_flags": [],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Hi Rahul, we are following up regarding the payment you committed to make on April 5.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0010-C3"
+      },
+      {
+        "turn": 2,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_BROKEN",
+        "transition_reason": "Borrower stated they couldn't make the payment due to an unexpected expense.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.9,
+        "text": "Sorry, I couldn't make the payment. An unexpected expense came up.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0010-C3"
+      },
+      {
+        "turn": 3,
+        "current_state": "PROMISE_BROKEN",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "The agent is offering an opportunity for the borrower to make a new commitment.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I understand. Would you like to provide a revised payment date?",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0010-C3"
+      },
+      {
+        "turn": 4,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "Borrower requested an extension but did not confirm a new payment date.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "I need another week. I'll try to arrange the funds by then.",
+        "speaker": "borrower",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0010-C3"
+      },
+      {
+        "turn": 5,
+        "current_state": "PROMISE_MADE",
+        "proposed_state": "PROMISE_MADE",
+        "transition_reason": "No payment was made and a new deadline is set for the next week.",
+        "risk_flags": [
+          "financial_stress"
+        ],
+        "compliance_flag": false,
+        "compliance_reason": null,
+        "confidence": 0.8,
+        "text": "Okay, I've noted your update. We'll follow up again next week.",
+        "speaker": "agent",
+        "channel": "whatsapp",
+        "date": "2026-04-06",
+        "conversation_id": "B-0010-C3"
+      }
+    ]
+  }
+]

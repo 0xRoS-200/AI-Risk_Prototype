@@ -1,0 +1,623 @@
+[
+  {
+    "borrower_id": "B-0001",
+    "persona_notes": "Cooperative gig-economy worker, temporary income dip, keeps her word",
+    "conversations": [
+      {
+        "conversation_id": "B-0001-C1",
+        "date": "2026-04-02",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Priya, this is Riverline reaching out on behalf of Freo regarding your pending EMI of \u20b94,500. Hope you're doing well."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Hi, yeah I know, things have been a bit tight since my rides dropped this month."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Totally understand, the gig income can be unpredictable. Would a part payment work, or do you need a few more days?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "I can pay \u20b92,000 by this Friday and the rest by the 15th."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "That works, I'll note it down. We'll check in on Friday then."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0001-C2",
+        "date": "2026-04-11",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Priya, following up \u2014 we saw the \u20b92,000 came through on Friday, thank you! Are we still on track for the 15th for the remaining \u20b92,500?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yes, picked up extra shifts this week, should be no problem."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0001-C3",
+        "date": "2026-04-16",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Priya, just confirming the remaining \u20b92,500 went through yesterday on the 15th \u2014 all settled now. Thanks for staying in touch through this."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yes, glad that's done. Thanks for being patient with me."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0002",
+    "persona_notes": "Genuine medical hardship, agent should route to support not pressure",
+    "conversations": [
+      {
+        "conversation_id": "B-0002-C1",
+        "date": "2026-04-03",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Good afternoon, this is regarding your loan with Nira, the payment for last month is still pending. Can we talk about it?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "I'm sorry, my father was hospitalized last month and everything went towards that. I genuinely don't have it right now."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "I'm really sorry to hear that. Let's not worry about the full amount right now \u2014 would it help if we looked at restructuring this into smaller installments once things settle?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "That would actually help a lot, yes."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "Okay, I'll flag this for our restructuring team to reach out with options. No pressure on the original date."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0002-C2",
+        "date": "2026-04-20",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi, following up \u2014 did our restructuring team reach out with the revised plan?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yes, I agreed to the new plan, \u20b91,500 a month starting next week. That works for me."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Great, noting that down. Thank you for working through this with us."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0003",
+    "persona_notes": "Disputes the amount initially, dispute is legitimate (duplicate charge), resolves cleanly",
+    "conversations": [
+      {
+        "conversation_id": "B-0003-C1",
+        "date": "2026-04-05",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Arjun, this is regarding your outstanding EMI of \u20b98,200 with CRED."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "That number is wrong, I already paid \u20b94,000 last week, your system shows the full amount still."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Let me check that for you, give me a moment."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "Sure, I have the transaction screenshot if needed."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0003-C2",
+        "date": "2026-04-06",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Arjun, you were right \u2014 there was a sync delay, your \u20b94,000 payment is now reflected. Updated balance is \u20b94,200."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Good, thanks for checking. I'll pay the remaining \u20b94,200 by next week."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Perfect, noted. Apologies for the confusion earlier."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0003-C3",
+        "date": "2026-04-14",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Arjun, confirming the \u20b94,200 was received yesterday \u2014 your account is fully settled now."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Great, thank you."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0004",
+    "persona_notes": "Serial promise-breaker, pattern escalates over three contacts",
+    "conversations": [
+      {
+        "conversation_id": "B-0004-C1",
+        "date": "2026-04-01",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Vikram, calling about your pending payment of \u20b912,000 with Propelld."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yeah yeah, I'll pay it by this weekend, don't worry."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Great, I'll note that \u2014 Saturday the 4th then?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "Yeah, Saturday."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0004-C2",
+        "date": "2026-04-07",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Vikram, we didn't see the payment come through on Saturday \u2014 what happened?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Oh sorry, got busy, I'll do it Monday for sure."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Okay, noting Monday the 9th. We really need this to go through this time."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "Yeah yeah, Monday."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0004-C3",
+        "date": "2026-04-12",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Vikram, Monday's payment also didn't come through. This is the second missed date \u2014 can you help me understand what's going on?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Look, I said I'll pay, stop calling me every other day, it's annoying."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "I understand the calls are frustrating, but we do need a real commitment here since two dates have passed."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "Whatever, just leave me alone, I'll deal with it when I deal with it."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0005",
+    "persona_notes": "Hostile from the very first contact, no de-escalation",
+    "conversations": [
+      {
+        "conversation_id": "B-0005-C1",
+        "date": "2026-04-08",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Good morning, this is Riverline calling regarding your outstanding balance with CRED."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "I don't owe you people anything, stop calling this number or I'm reporting you."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "I understand this is frustrating \u2014 I just want to clarify the details so we can sort this out fairly."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "There's nothing to sort out, lose my number."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0006",
+    "persona_notes": "Ghosts after first contact, re-engages two weeks later when reached again",
+    "conversations": [
+      {
+        "conversation_id": "B-0006-C1",
+        "date": "2026-04-02",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Meena, this is regarding your pending EMI of \u20b96,000 with Freo. Could you let us know your situation?"
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0006-C2",
+        "date": "2026-04-09",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Meena, following up again on the \u20b96,000 pending with Freo \u2014 would appreciate hearing from you."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0006-C3",
+        "date": "2026-04-17",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Meena, reaching out once more about the pending EMI \u2014 happy to work out a plan that suits you."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Sorry for the silence, I switched jobs and missed these. I can pay \u20b96,000 by next Friday."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "No worries at all, thanks for getting back to me. Noting Friday the 24th."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0007",
+    "persona_notes": "Breaks a promise once, but re-promises with a believable reason and follows through \u2014 recovery arc",
+    "conversations": [
+      {
+        "conversation_id": "B-0007-C1",
+        "date": "2026-04-04",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, calling about the \u20b99,500 pending with Nira."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Right, I can clear that by the 10th, my salary comes in on the 9th."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Sounds good, noting the 10th."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0007-C2",
+        "date": "2026-04-11",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, we didn't see the \u20b99,500 come through yesterday \u2014 everything okay?"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Ah, sorry \u2014 my salary got delayed because of a company issue, it's actually coming on the 14th now. I can pay the same day."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Understandable, these things happen. Let's note the 14th \u2014 I'll check in then."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0007-C3",
+        "date": "2026-04-15",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, just confirming \u2014 the \u20b99,500 came through yesterday on the 14th. All clear now, thank you."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yep, sorted. Thanks for being patient."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0008",
+    "persona_notes": "Discloses hardship mid-dispute \u2014 tests HARDSHIP_FLAGGED reachable from DISPUTING via ENGAGED",
+    "conversations": [
+      {
+        "conversation_id": "B-0008-C1",
+        "date": "2026-04-06",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Sunita, calling about the \u20b97,000 outstanding with Propelld."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "I don't think that's right, I was told my balance was \u20b95,500 last time I checked."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Let me pull up the exact breakdown and call you back within the hour with the correct figure."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "Okay, fine, but honestly even \u20b95,500 is hard for me right now, I lost some hours at work this month."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "I hear you, we'll sort the number out first and then talk about a plan that actually works for your situation."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0009",
+    "persona_notes": "Dialogue evaluator submission: custom script parsed at turn count 5",
+    "conversations": [
+      {
+        "conversation_id": "B-0009-C1",
+        "date": "2026-06-21",
+        "channel": "voice",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hello Ravi, this call is regarding your EMI of INR 25000, the due date has surpassed 5 days, therefore please let us know when you going to pay!"
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Hi, yeah I know, things have been a bit tight since I got hospitalized this month and am in shortage of money"
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Sorry for you, Totally understand, the income can be unpredictable. Would art payment work, or do you need a few more days?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "I can pay \u20b910,000 by end of this month and the rest by next month, would be better if EMI."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "I'll note it down. We'll check with our Officers."
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "borrower_id": "B-0010",
+    "persona_notes": "Dialogue evaluator submission: custom script parsed at conversation count 3",
+    "conversations": [
+      {
+        "conversation_id": "B-0010-C1",
+        "date": "2026-04-02",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, this is Riverline calling on behalf of Freo regarding your overdue EMI of \u20b95,000."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Overdue? I don't think so. I paid everything last month."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "I understand. Our records show the EMI due on March 30 is still pending."
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "That doesn't sound right. I'll check and get back to you."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "Sure, please verify and let us know. We'll follow up in a couple of days."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0010-C2",
+        "date": "2026-04-03",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, just following up on our previous conversation regarding the pending EMI."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Yes, I checked. Looks like I missed the payment by mistake."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "Thank you for confirming. When would you be able to clear the dues?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "I'll make the full payment of \u20b95,000 by April 5."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "Great, I'll note that commitment. We'll check again on April 5."
+          }
+        ]
+      },
+      {
+        "conversation_id": "B-0010-C3",
+        "date": "2026-04-06",
+        "channel": "whatsapp",
+        "turns": [
+          {
+            "turn": 1,
+            "speaker": "agent",
+            "text": "Hi Rahul, we are following up regarding the payment you committed to make on April 5."
+          },
+          {
+            "turn": 2,
+            "speaker": "borrower",
+            "text": "Sorry, I couldn't make the payment. An unexpected expense came up."
+          },
+          {
+            "turn": 3,
+            "speaker": "agent",
+            "text": "I understand. Would you like to provide a revised payment date?"
+          },
+          {
+            "turn": 4,
+            "speaker": "borrower",
+            "text": "I need another week. I'll try to arrange the funds by then."
+          },
+          {
+            "turn": 5,
+            "speaker": "agent",
+            "text": "Okay, I've noted your update. We'll follow up again next week."
+          }
+        ]
+      }
+    ]
+  }
+]
