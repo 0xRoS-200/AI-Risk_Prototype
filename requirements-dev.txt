@@ -2,5 +2,10 @@ pydantic>=2.0
 python-dotenv
 groq
 google-genai
-fastapi
+ollama
+matplotlib
+seaborn
+pandas
 redis
+fastapi
+uvicorn
