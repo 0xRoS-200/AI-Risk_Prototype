@@ -54,13 +54,38 @@ if redis:
         redis_client = None
 
 # File Cache Fallback
-CACHE_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "llm_cache.json")
+if os.environ.get("VERCEL"):
+    CACHE_FILE_PATH = "/tmp/llm_cache.json"
+else:
+    CACHE_FILE_PATH = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "llm_cache.json")
+
 import threading
 _cache_lock = threading.Lock()
 
 def _read_local_cache() -> dict:
     if not os.path.exists(CACHE_FILE_PATH):
-        return {}
+        # On Vercel, copy the packaged read-only template to /tmp on first read
+        if os.environ.get("VERCEL"):
+            package_cache_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "data", "llm_cache.json")
+            if os.path.exists(package_cache_path):
+                try:
+                    import shutil
+                    os.makedirs(os.path.dirname(CACHE_FILE_PATH), exist_ok=True)
+                    shutil.copyfile(package_cache_path, CACHE_FILE_PATH)
+                    logger.info(f"Initialized writeable cache at {CACHE_FILE_PATH} from template.")
+                except Exception as e:
+                    logger.warning(f"Failed to copy package cache to /tmp: {e}")
+                    # Fallback to reading the template directly
+                    try:
+                        with open(package_cache_path, "r", encoding="utf-8") as f:
+                            return json.load(f)
+                    except Exception:
+                        return {}
+            else:
+                return {}
+        else:
+            return {}
+            
     with _cache_lock:
         try:
             with open(CACHE_FILE_PATH, "r", encoding="utf-8") as f:

@@ -133,6 +133,28 @@ def parse_raw_dialogue_to_conversations(text: str, borrower_id: str) -> list[dic
         
     return conversations
 
+def get_file_path(relative_path: str) -> str:
+    """
+    Resolves a relative file path. If running on Vercel (read-only environment),
+    it uses and copy-initializes files under the writeable /tmp directory.
+    """
+    original_path = os.path.normpath(os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", relative_path))
+    if not os.environ.get("VERCEL"):
+        return original_path
+        
+    tmp_path = os.path.normpath(os.path.join("/tmp", relative_path))
+    if not os.path.exists(tmp_path):
+        try:
+            os.makedirs(os.path.dirname(tmp_path), exist_ok=True)
+            if os.path.exists(original_path):
+                import shutil
+                shutil.copyfile(original_path, tmp_path)
+                print(f"Copied template to writeable /tmp location: {tmp_path}")
+        except Exception as e:
+            print(f"Warning: could not copy template to {tmp_path}: {e}")
+            return original_path
+    return tmp_path
+
 # In-memory session caches to support read-only serverless environments like Vercel
 dynamic_borrowers = []
 dynamic_runs = []
@@ -140,7 +162,7 @@ dynamic_runs = []
 @app.get("/api/borrowers")
 def get_borrowers():
     import json
-    output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output.json")
+    output_path = get_file_path("examples/sample_run_output.json")
     try:
         with open(output_path, "r", encoding="utf-8") as f:
             data = json.load(f)
@@ -166,13 +188,13 @@ def reset_portfolio():
     
     try:
         # File paths
-        backup_borrowers = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "synthetic_borrowers_backup.json")
-        target_borrowers = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "synthetic_borrowers.json")
+        backup_borrowers = get_file_path("data/synthetic_borrowers_backup.json")
+        target_borrowers = get_file_path("data/synthetic_borrowers.json")
         
-        backup_runs = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output_backup.json")
-        target_runs = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output.json")
+        backup_runs = get_file_path("examples/sample_run_output_backup.json")
+        target_runs = get_file_path("examples/sample_run_output.json")
         
-        dashboard_runs = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dashboard", "src", "assets", "sample_run_output.json")
+        dashboard_runs = get_file_path("dashboard/src/assets/sample_run_output.json")
         
         # Reset files
         if os.path.exists(backup_borrowers):
@@ -202,7 +224,7 @@ def analyze_conversation(req: AnalyzeRequest):
     import json
     try:
         # 1. Load existing synthetic borrowers to determine next ID and append new record
-        data_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "synthetic_borrowers.json")
+        data_path = get_file_path("data/synthetic_borrowers.json")
         try:
             with open(data_path, "r", encoding="utf-8") as f:
                 existing_borrowers = json.load(f)
@@ -309,7 +331,7 @@ def analyze_conversation(req: AnalyzeRequest):
         dynamic_runs.append(new_run_output)
         
         # 3. Load, append, and save to sample_run_output.json (examples and dashboard assets)
-        output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output.json")
+        output_path = get_file_path("examples/sample_run_output.json")
         try:
             with open(output_path, "r", encoding="utf-8") as f:
                 run_outputs = json.load(f)
@@ -329,7 +351,7 @@ def analyze_conversation(req: AnalyzeRequest):
         except Exception as e:
             print(f"Warning: could not write to {output_path} (read-only filesystem): {e}")
             
-        dashboard_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dashboard", "src", "assets", "sample_run_output.json")
+        dashboard_path = get_file_path("dashboard/src/assets/sample_run_output.json")
         try:
             os.makedirs(os.path.dirname(dashboard_path), exist_ok=True)
             with open(dashboard_path, "w", encoding="utf-8") as f:
