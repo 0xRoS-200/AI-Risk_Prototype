@@ -148,7 +148,7 @@ function App() {
       <header className="header">
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', flexWrap: 'wrap', gap: '1rem' }}>
           <div>
-            <h1>Riverline Risk Intelligence</h1>
+            <h1>Risk Intelligence</h1>
             <p>Auditable state-machine analytics for automated debt collections</p>
           </div>
           <div style={{ display: 'flex', gap: '0.75rem', alignItems: 'center' }}>

@@ -12,7 +12,7 @@ from schema import Borrower, Conversation, Turn
 from state_engine import process_borrower
 from rollup_metrics import compute_metrics
 
-app = FastAPI(title="Riverline Risk Intelligence API", version="1.0.0")
+app = FastAPI(title="Risk Intelligence API", version="1.0.0")
 
 # Enable CORS so our React frontend (typically on port 5173) can call us
 app.add_middleware(
@@ -108,7 +108,7 @@ def parse_raw_dialogue_to_conversations(text: str, borrower_id: str) -> list[dic
             prefix = parts[0].strip().lower()
             body = parts[1].strip()
             
-            if prefix in ("agent", "you", "collector", "representative", "riverline"):
+            if prefix in ("agent", "you", "collector", "representative", "collections"):
                 speaker = "agent"
             elif prefix in ("borrower", "customer", "client", "me", "payer", "priya", "vikram", "sunita", "rahul", "arjun", "meena"):
                 speaker = "borrower"

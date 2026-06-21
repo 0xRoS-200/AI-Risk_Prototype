@@ -36,7 +36,7 @@ from pydantic import BaseModel, Field
 class BorrowerState(str, Enum):
     """
     Every possible state a borrower can be in, across their
-    lifecycle of conversations with Riverline's agent.
+    lifecycle of conversations with the collections agent.
 
     Inheriting from `str` (not just `Enum`) is a small but useful
     trick: it means BorrowerState.NEW behaves like the string "NEW"

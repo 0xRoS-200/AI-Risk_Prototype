@@ -20,7 +20,7 @@ def build_prompt(current_state: BorrowerState, turn: Turn, context: List[Turn]) 
         
     current_text = f"Turn {turn.turn} ({turn.speaker}): {turn.text}"
     
-    prompt = f"""You are the core intelligence of Riverline's Risk Engine.
+    prompt = f"""You are the core intelligence of the Risk Engine.
 Your job is to read the latest turn of a conversation between a debt collection agent and a borrower, and determine if the borrower's state has changed.
 
 CURRENT STATE: {current_state.value}

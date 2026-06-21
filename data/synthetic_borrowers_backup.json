@@ -8,7 +8,7 @@
         "date": "2026-04-02",
         "channel": "whatsapp",
         "turns": [
-          {"turn": 1, "speaker": "agent", "text": "Hi Priya, this is Riverline reaching out on behalf of Freo regarding your pending EMI of ₹4,500. Hope you're doing well."},
+          {"turn": 1, "speaker": "agent", "text": "Hi Priya, this is Collections reaching out on behalf of Freo regarding your pending EMI of ₹4,500. Hope you're doing well."},
           {"turn": 2, "speaker": "borrower", "text": "Hi, yeah I know, things have been a bit tight since my rides dropped this month."},
           {"turn": 3, "speaker": "agent", "text": "Totally understand, the gig income can be unpredictable. Would a part payment work, or do you need a few more days?"},
           {"turn": 4, "speaker": "borrower", "text": "I can pay ₹2,000 by this Friday and the rest by the 15th."},
@@ -147,7 +147,7 @@
         "date": "2026-04-08",
         "channel": "voice",
         "turns": [
-          {"turn": 1, "speaker": "agent", "text": "Good morning, this is Riverline calling regarding your outstanding balance with CRED."},
+          {"turn": 1, "speaker": "agent", "text": "Good morning, this is Collections calling regarding your outstanding balance with CRED."},
           {"turn": 2, "speaker": "borrower", "text": "I don't owe you people anything, stop calling this number or I'm reporting you."},
           {"turn": 3, "speaker": "agent", "text": "I understand this is frustrating — I just want to clarify the details so we can sort this out fairly."},
           {"turn": 4, "speaker": "borrower", "text": "There's nothing to sort out, lose my number."}

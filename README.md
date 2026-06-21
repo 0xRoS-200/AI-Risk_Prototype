@@ -1,8 +1,8 @@
-# Riverline Risk Intelligence Engine
+# Risk Intelligence Engine
 
 *A borrower-lifecycle state machine for AI-driven debt collections.*
 
-> "Study all these loan books to find a credit-segment we can uniquely disburse loans in" — *Riverline Manifesto*
+> "Study all these loan books to find a credit-segment we can uniquely disburse loans in" — *Collections Manifesto*
 
 Most "AI for collections" demos stop at "the bot can talk to a borrower." This project is a prototype of the data layer underneath: a system that takes raw collection call data and turns it into structured, auditable, decision-ready borrower intelligence. It doesn't just label individual calls; it models the borrower's **lifecycle** across multiple conversations over time, producing rollup metrics that a credit decision actually needs.
 
@@ -10,7 +10,7 @@ Most "AI for collections" demos stop at "the bot can talk to a borrower." This p
 
 ## 1. Why this project exists
 
-Riverline's manifesto lays out a four-step master plan:
+The manifesto lays out a four-step master plan:
 1. Replace call centers with AI agents to automate debt-collection.
 2. Use these AI agents to own and resolve different loan books.
 3. **Study all these loan books to find a credit-segment we can uniquely disburse loans in.**
@@ -48,7 +48,7 @@ A single hardcoded LLM provider is a demo decision. A fallback chain and persist
 ## 3. System Architecture & Data Flow
 
 ```
-riverline-risk-intel/
+risk-intel-prototype/
 ├── README.md                 ← Consolidated documentation and setup guide
 ├── data/
 │   └── synthetic_borrowers.json   ← Simulated multi-call/chat borrower histories
@@ -187,7 +187,7 @@ python src/run_engine.py
 The dashboard's **Simulation Console (Playground)** supports evaluating both single turns and full conversation logs:
 * **Raw Script Mode:** Paste a multi-turn conversation script. E.g.:
   ```text
-  Agent: Hi Priya, this is Riverline.
+  Agent: Hi Priya, this is collections.
   Borrower: I lost my job last week, things are tight.
   Agent: I understand. We can set a restructured plan.
   Borrower: I will pay ₹1,000 next Friday.

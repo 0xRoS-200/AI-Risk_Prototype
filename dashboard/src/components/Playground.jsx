@@ -34,7 +34,7 @@ const TRANSITION_TABLE = {
 };
 
 const SAMPLE_CONVERSATION = `=== Call 1: whatsapp (2026-04-02) ===
-Agent: Hi Priya, this is Riverline reaching out on behalf of Freo regarding your pending EMI of ₹4,500. Hope you're doing well.
+Agent: Hi Priya, this is collections reaching out on behalf of Freo regarding your pending EMI of ₹4,500. Hope you're doing well.
 Borrower: Hi, yeah I know, things have been a bit tight since my rides dropped this month.
 Agent: Totally understand, the gig income can be unpredictable. Would a part payment work, or do you need a few more days?
 Borrower: I can pay ₹2,000 by this Friday and the rest by the 15th.
@@ -139,7 +139,7 @@ export default function Playground({ onDataUpdated }) {
         const prefix = parts[0].trim().toLowerCase();
         body = parts.slice(1).join(':').trim();
         
-        if (['agent', 'you', 'collector', 'representative', 'riverline'].includes(prefix)) {
+        if (['agent', 'you', 'collector', 'representative', 'collections'].includes(prefix)) {
           speaker = 'agent';
         } else if (['borrower', 'customer', 'client', 'me', 'payer', 'priya', 'vikram', 'sunita', 'rahul', 'arjun', 'meena'].includes(prefix)) {
           speaker = 'borrower';
