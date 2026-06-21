@@ -133,20 +133,37 @@ def parse_raw_dialogue_to_conversations(text: str, borrower_id: str) -> list[dic
         
     return conversations
 
+# In-memory session caches to support read-only serverless environments like Vercel
+dynamic_borrowers = []
+dynamic_runs = []
+
 @app.get("/api/borrowers")
 def get_borrowers():
     import json
     output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output.json")
     try:
         with open(output_path, "r", encoding="utf-8") as f:
-            return json.load(f)
+            data = json.load(f)
     except Exception:
-        return []
+        data = []
+        
+    # Merge with in-memory dynamic runs (ensuring no duplicates by borrower_id)
+    existing_ids = {item["borrower_id"] for item in data if "borrower_id" in item}
+    for run in dynamic_runs:
+        if run["borrower_id"] not in existing_ids:
+            data.append(run)
+            existing_ids.add(run["borrower_id"])
+            
+    return data
 
 @app.post("/api/reset")
 def reset_portfolio():
     import json
     import shutil
+    global dynamic_borrowers, dynamic_runs
+    dynamic_borrowers.clear()
+    dynamic_runs.clear()
+    
     try:
         # File paths
         backup_borrowers = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "synthetic_borrowers_backup.json")
@@ -164,12 +181,21 @@ def reset_portfolio():
             shutil.copyfile(backup_runs, target_runs)
             os.makedirs(os.path.dirname(dashboard_runs), exist_ok=True)
             shutil.copyfile(backup_runs, dashboard_runs)
-            
+    except Exception as e:
+        print(f"Warning: file reset failed (expected on read-only serverless systems): {e}")
+        
+    # Always load data from target_runs or fallback to backup_runs
+    try:
         with open(target_runs, "r", encoding="utf-8") as f:
             data = json.load(f)
-        return {"status": "success", "data": data}
-    except Exception as e:
-        raise HTTPException(status_code=500, detail=f"Reset failed: {str(e)}")
+    except Exception:
+        try:
+            with open(backup_runs, "r", encoding="utf-8") as f:
+                data = json.load(f)
+        except Exception:
+            data = []
+            
+    return {"status": "success", "data": data}
 
 @app.post("/api/analyze")
 def analyze_conversation(req: AnalyzeRequest):
@@ -183,6 +209,13 @@ def analyze_conversation(req: AnalyzeRequest):
         except Exception:
             existing_borrowers = []
             
+        # Merge with in-memory dynamic borrowers
+        existing_b_ids = {b["borrower_id"] for b in existing_borrowers if "borrower_id" in b}
+        for b in dynamic_borrowers:
+            if b["borrower_id"] not in existing_b_ids:
+                existing_borrowers.append(b)
+                existing_b_ids.add(b["borrower_id"])
+                
         # Find next B-XXXX ID
         max_num = 0
         for b in existing_borrowers:
@@ -206,10 +239,15 @@ def analyze_conversation(req: AnalyzeRequest):
             "persona_notes": f"Dialogue evaluator submission: custom script parsed at conversation count {len(conversations_data)}",
             "conversations": conversations_data
         }
+        
+        dynamic_borrowers.append(new_borrower_record)
         existing_borrowers.append(new_borrower_record)
         
-        with open(data_path, "w", encoding="utf-8") as f:
-            json.dump(existing_borrowers, f, indent=2)
+        try:
+            with open(data_path, "w", encoding="utf-8") as f:
+                json.dump(existing_borrowers, f, indent=2)
+        except Exception as e:
+            print(f"Warning: could not write to {data_path} (read-only filesystem): {e}")
             
         # 2. Run state engine to calculate metrics and transitions
         conversations = []
@@ -268,6 +306,8 @@ def analyze_conversation(req: AnalyzeRequest):
             "turn_outcomes": serialized_turns
         }
         
+        dynamic_runs.append(new_run_output)
+        
         # 3. Load, append, and save to sample_run_output.json (examples and dashboard assets)
         output_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "examples", "sample_run_output.json")
         try:
@@ -276,10 +316,18 @@ def analyze_conversation(req: AnalyzeRequest):
         except Exception:
             run_outputs = []
             
-        run_outputs.append(new_run_output)
-        
-        with open(output_path, "w", encoding="utf-8") as f:
-            json.dump(run_outputs, f, indent=2)
+        # Merge with in-memory runs
+        existing_run_ids = {r["borrower_id"] for r in run_outputs if "borrower_id" in r}
+        for run in dynamic_runs:
+            if run["borrower_id"] not in existing_run_ids:
+                run_outputs.append(run)
+                existing_run_ids.add(run["borrower_id"])
+                
+        try:
+            with open(output_path, "w", encoding="utf-8") as f:
+                json.dump(run_outputs, f, indent=2)
+        except Exception as e:
+            print(f"Warning: could not write to {output_path} (read-only filesystem): {e}")
             
         dashboard_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "dashboard", "src", "assets", "sample_run_output.json")
         try:
@@ -287,7 +335,7 @@ def analyze_conversation(req: AnalyzeRequest):
             with open(dashboard_path, "w", encoding="utf-8") as f:
                 json.dump(run_outputs, f, indent=2)
         except Exception as e:
-            print(f"Error copying to dashboard assets: {e}")
+            print(f"Warning: could not write to {dashboard_path} (read-only filesystem): {e}")
             
         return new_run_output
         

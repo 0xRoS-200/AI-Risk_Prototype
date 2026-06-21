@@ -49,7 +49,7 @@ function App() {
 
   const fetchBorrowers = async () => {
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/borrowers');
+      const response = await fetch('/api/borrowers');
       if (response.ok) {
         const data = await response.json();
         if (data && data.length > 0) {
@@ -73,7 +73,7 @@ function App() {
     if (!window.confirm("Are you sure you want to reset the portfolio? This will clear all simulated borrowers and restore defaults.")) return;
     setResetting(true);
     try {
-      const response = await fetch('http://127.0.0.1:8000/api/reset', { method: 'POST' });
+      const response = await fetch('/api/reset', { method: 'POST' });
       if (response.ok) {
         const result = await response.json();
         if (result.status === 'success' && result.data) {
